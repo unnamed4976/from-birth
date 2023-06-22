@@ -1,0 +1,19 @@
+'use strict';
+
+{
+  const kuuran = document.getElementById('kuuran');
+
+  const year = document.getElementById('year');
+  const month = document.getElementById('month');
+  const day = document.getElementById('day');
+  
+  const button =  document.querySelector('button');
+
+  const d = new Date();
+
+  button.addEventListener('click',  () => {
+  
+  kuuran.textContent = `あなたが生まれてから今日までで、${(d.getFullYear() - year.value) * 365 + (d.getMonth() + 1 - month.value) * 31 + d.getDate() - day.value + 1}日です。`;
+  });
+  
+}
